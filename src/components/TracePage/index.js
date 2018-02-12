@@ -36,13 +36,11 @@ import LoadingIndicator from '../common/LoadingIndicator';
 import * as jaegerApiActions from '../../actions/jaeger-api';
 import { getTraceName } from '../../model/trace-viewer';
 import type { Trace } from '../../types';
-import prefixUrl from '../../utils/prefix-url';
 
 import './index.css';
 
 type TracePageProps = {
   fetchTrace: string => void,
-  history: RouterHistory,
   id: string,
   loading: boolean,
   trace: ?Trace,
@@ -211,15 +209,16 @@ export default class TracePage extends React.PureComponent<TracePageProps, Trace
   };
 
   ensureTraceFetched() {
-    const { fetchTrace, trace, id, loading } = this.props;
-    if (!trace && !loading) {
-      fetchTrace(id);
-      return;
-    }
-    const { history } = this.props;
-    if (id && id !== id.toLowerCase()) {
-      history.push(prefixUrl(`/trace/${id.toLowerCase()}`));
-    }
+    const { fetchTrace, id } = this.props;
+    fetchTrace(id);
+    // if (!trace && !loading) {
+    //   fetchTrace(id);
+    //   return;
+    // }
+    // const { history } = this.props;
+    // if (id && id !== id.toLowerCase()) {
+    //   history.push(prefixUrl(`/trace/${id.toLowerCase()}`));
+    // }
   }
 
   render() {
