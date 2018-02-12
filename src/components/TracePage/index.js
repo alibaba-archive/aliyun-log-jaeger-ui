@@ -20,7 +20,7 @@ import _mapValues from 'lodash/mapValues';
 import _maxBy from 'lodash/maxBy';
 import _values from 'lodash/values';
 import { connect } from 'react-redux';
-import type { RouterHistory, Match } from 'react-router-dom';
+import type { Match } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 
 import type { CombokeysHandler, ShortcutCallbacks } from './keyboard-shortcuts';
