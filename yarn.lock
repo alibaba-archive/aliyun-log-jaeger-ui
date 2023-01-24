@@ -8284,8 +8284,8 @@ u-basscss@2.0.0:
   resolved "https://registry.yarnpkg.com/u-basscss/-/u-basscss-2.0.0.tgz#5a78c543f69641fca1b693714852a497a35d9b79"
 
 ua-parser-js@^0.7.9:
-  version "0.7.14"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.14.tgz#110d53fa4c3f326c121292bbeac904d2e03387ca"
+  version "0.7.33"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.33.tgz#1d04acb4ccef9293df6f70f2c3d22f3030d8b532"
 
 uglify-js@3.3.x, uglify-js@^3.0.13:
   version "3.3.7"
